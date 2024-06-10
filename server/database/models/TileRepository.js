@@ -10,8 +10,9 @@ class TileRepository extends AbstractRepository {
       return [];
     }
 
-    const query = `SELECT * FROM ${this.table} WHERE coordX = ? AND coordY = ?`;
-    const [rows] = await this.database.query(query, [coordX, coordY]);
+    const query = `SELECT * FROM ${this.table} WHERE coord_x BETWEEN 0 AND 11 AND coord_y BETWEEN 0 AND 5 limit 1`;
+
+    const [rows] = await this.database.query(query);
 
     return rows;
   }
