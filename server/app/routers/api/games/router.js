@@ -6,9 +6,9 @@ const router = express.Router();
 // Define Your API Routes Here
 /* ************************************************************************* */
 
-const { add } = require("../../../controllers/gameActions");
+const { browse } = require("../../../controllers/tileActions");
 
-router.post("/", add);
+router.get("/", browse);
 
 /* ************************************************************************* */
 
