@@ -5,6 +5,10 @@ class TileRepository extends AbstractRepository {
     super({ table: "tile" });
   }
 
+  // readyByCoordinates(coordX, coordY) {
+
+  // }
+
   async readAll() {
     // Execute the SQL SELECT query to retrieve all tiles from the "tile" table
     const [rows] = await this.database.query(
