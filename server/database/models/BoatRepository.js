@@ -14,12 +14,12 @@ class BoatRepository extends AbstractRepository {
   }
 
   async update(boat) {
-    const [affectedRows] = await this.database.query(
+    const [result] = await this.database.query(
       `update ${this.table} set coord_x=${boat.coord_x}, coord_y=${boat.coord_y} where id=${boat.id}`,
       [boat]
     );
 
-    return affectedRows;
+    return result.affectedRows;
   }
 }
 
