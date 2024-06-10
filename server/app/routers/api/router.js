@@ -10,13 +10,13 @@ const boatsRouter = require("./boats/router");
 
 router.use("/boats", boatsRouter);
 
-const tileRouter = require("./tiles/router");
-
-router.use("/tiles", tileRouter);
-
 const gamesRouter = require("./games/router");
 
 router.use("/games", gamesRouter);
+
+const tilesRouter = require("./tiles/router");
+
+router.use("/tiles", tilesRouter);
 
 /* ************************************************************************* */
 
