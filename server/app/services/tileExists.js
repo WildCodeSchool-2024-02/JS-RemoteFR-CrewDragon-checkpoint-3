@@ -1,4 +1,4 @@
-const tileExistsMiddleware = (req, res, next) => {
+const tileExists = (req, res, next) => {
   const coordX = req.body.coord_x;
   const coordY = req.body.coord_y;
 
@@ -9,4 +9,4 @@ const tileExistsMiddleware = (req, res, next) => {
   }
 };
 
-module.exports = tileExistsMiddleware;
+module.exports = tileExists;
